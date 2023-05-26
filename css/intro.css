@@ -1,0 +1,55 @@
+.intro{
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.intro-text h1{
+font-size: 4.5rem;
+margin-bottom: 30px;
+line-height: 1.1;
+position: relative;
+}
+
+.intro-text h1::before{
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -40px;
+  width: 130px;
+  height: 130px;
+  background: url(/img/detalhe.svg) no-repeat center;
+  z-index: -1;
+}
+
+.intro-text p{
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 1000px){
+.intro-text h1{
+  font-size: 3rem;
+}
+}
+
+@media (max-width: 800px){
+  .intro{
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .intro-text h1{
+    font-size: 2rem;
+  }
+  .intro-text h1::before{
+    width: 30px;
+    height: 10px;
+    left: 0px;
+    top: -15px;
+  }
+
+}
